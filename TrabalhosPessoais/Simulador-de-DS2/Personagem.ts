@@ -7,6 +7,7 @@ class Personagem {
     level: number
     vidaMAX: number
     vidaAtual: number
+    almas: number
     classeInicial: string
     cargaMAXkg: number
     PTvigor: number
@@ -21,13 +22,14 @@ class Personagem {
     equipMdireita: string
     equipMesquerda: string
     
-    constructor(nome: string, altura: number, peso: number, level: number, vidaMaxima: number, vidaAtual: number, classeInicial: string, cargaMaxima: number, vigor: number, resistencia: number, vitalidade: number, PTsintonização: number, força: number, destreza: number, adaptabilidade: number, inteligencia: number, fé: number, equipMdeireita: string, equipMesquerda: string){
+    constructor(nome: string, altura: number, peso: number, level: number, vidaMaxima: number, vidaAtual: number, almasatuais: number, classeInicial: string, cargaMaxima: number, vigor: number, resistencia: number, vitalidade: number, PTsintonização: number, força: number, destreza: number, adaptabilidade: number, inteligencia: number, fé: number, equipMdeireita: string, equipMesquerda: string){
         this.nome = nome
         this.altura = altura
         this.peso = peso
         this.level = level
         this.vidaMAX = vidaMaxima
         this.vidaAtual = vidaAtual
+        this.almas = almasatuais
         this.classeInicial = classeInicial
         this.cargaMAXkg = cargaMaxima
         this.PTvigor = vigor
@@ -142,3 +144,16 @@ let clerigo = new ClasseInicial('Clerigo',	14,	10,	3,	8,	10,	11,	5,	4,	4,	12, "M
 let feiticeiro = new ClasseInicial('Feiticeiro', 11,	5,	6,	5,	12,	3,	7,	8,	14,	4, "Adaga", "Cajado do feiticeiro")
 let explorador = new ClasseInicial('Explorador',10,	7,	6,	9,	7,	6,	6,	12,	5,	5, "Adaga", "nenhuma")
 let depravado = new ClasseInicial("Depravado", 	1,	6,	6,	6,	6,	6,	6,	6,	6,	6, "Nenhuma", "Nenhuma")
+
+class ArraysdeClasses {
+    classesIniciais: ClasseInicial[]
+    persongens: Personagem[]
+
+    constructor(classeinicial: [], personagensArray : []){
+        this.persongens = personagensArray
+        this.classesIniciais = classeinicial
+    }
+
+    
+
+}
